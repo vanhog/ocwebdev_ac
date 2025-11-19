@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms and Values</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
       <section class="center-screen">
         <div class="container">
-          <h2>Number to double</h2>
+          <h2>Year of your birth</h2>
           <form>
             <input type="text" id="formInput" name="formInput" />
             <br />
           </form>
-          <button class="submitButton" onclick="double()">Double!</button>
+          <button class="submitButton" onclick="age()">Calculate Age</button>
           <div id="actionMessage">
-            Enter a number and <br />
-            press "Double!" to see the result.
+            Enter the year of your birth and <br />
+            press "Calculate Age" to see how old you are.
           </div>
           <p id="result"></p>
         </div>
       </section>
     </main>
+
     <script src="./script.js"></script>
   </body>
 </html>
