@@ -4,6 +4,7 @@ function double() {
   // on the page
 
   docNumber = Number(document.getElementById('formInput').value);
+  console.log(docNumber);
 
   if (!isNaN(docNumber)) {
     console.log(docNumber * 2);
@@ -13,6 +14,7 @@ function double() {
     document.getElementById('actionMessage').innerHTML =
       'Please enter a valid number';
     document.getElementById('formInput').value = '';
+    document.getElementById('result').innerHTML = '';
   }
 }
 
@@ -31,6 +33,8 @@ function age() {
   } else {
     document.getElementById('actionMessage').innerHTML =
       'Please enter your year of birth.';
+    document.getElementById('formInput').value = '';
+    document.getElementById('result').innerHTML = '';
   }
 }
 
@@ -53,6 +57,9 @@ function ageDiff() {
   } else {
     document.getElementById('actionMessage').innerHTML =
       'Please enter valid data.';
+    document.getElementById('result').innerHTML = '';
+    document.getElementById('formInput1').value = 'Year 1';
+    document.getElementById('formInput2').value = 'Year 2';
   }
 }
 
