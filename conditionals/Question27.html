@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Quality by Index</title>
+    <title>Questen 27</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main>
       <section class="center-screen">
         <div class="container">
-          <h2>Weather Quality</h2>
-          <div>
+          <h2>Question 27</h2>
+          <form>
             <input
               type="text"
               class="formInput"
@@ -19,11 +19,11 @@
               name="formInput"
             />
             <br />
-          </div>
-          <button class="submitButton" onclick="weather()">Evaluate</button>
+          </form>
+          <button class="submitButton" onclick="q27()">Calculate</button>
           <div id="actionMessage">
-            Enter the weather Quality index (0 - 10) and press the button to get
-            the weather quality.
+            Enter a number x press "Calculate" and see what (x-27) * 2 gives
+            when x is greater than 27.
           </div>
           <p id="result"></p>
         </div>

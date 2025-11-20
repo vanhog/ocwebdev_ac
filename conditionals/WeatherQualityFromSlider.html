@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Quality from Slider</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="center-screen">
+        <div class="container slider-container">
+          <h2>Air Quality</h2>
+          <form>
+            <input
+              type="range"
+              id="weatherQualitySlider"
+              class="inputSlider"
+              min="0"
+              max="150"
+              name="inputSlider"
+              onchange="checkAirQuality()"
+            />
+            <br />
+          </form>
+
+          <div id="actionMessage">Adjust the slider to the desired value.</div>
+          <p id="aoi"></p>
+          <p>Level of health concern:</p>
+          <p id="lhc"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
