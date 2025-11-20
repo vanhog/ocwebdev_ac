@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Difference</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="center-screen">
+        <div class="container">
+          <h2>Age Difference</h2>
+          <form>
+            <input
+              type="text"
+              id="formInput1"
+              name="formInput1"
+              value="Year 1"
+              class="formInput"
+              onclick="releaseValue('formInput1')"
+            />
+            <br />
+            <input
+              type="text"
+              id="formInput2"
+              name="formInput2"
+              value="Year 2"
+              class="formInput"
+              onclick="releaseValue('formInput2')"
+            />
+            <br />
+          </form>
+          <button class="submitButton" onclick="ageDiff()">
+            Calculate &#x394;
+          </button>
+          <div id="actionMessage">
+            Enter two years of birth and <br />
+            press the button to get <br />the difference in age.
+          </div>
+          <p id="result"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
