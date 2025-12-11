@@ -1,4 +1,11 @@
+interface IStudent {
+    name : string;
+    age : number; 
+    email : string;
+}
 // Add types to these functions
+
+let sampkkkkk : IStudent;
 
 function calculateTotal(price : number, quantity : number, tax : number) : number {
     return price * quantity * (1 + tax);
@@ -11,15 +18,15 @@ function greetUser(name : string, greeting : string) : string {
     return `Hello, ${name}!`;
 }
 
-function createUser(name : string, age : number, email : string) : {
+function createUser(inStud : IStudent) : {
         name: string;
         age: number;
         email: string;
     } {
     return {
-        name: name,
-        age: age || 18,
-        email: email
+        name: inStud.name,
+        age: inStud.age || 18,
+        email: inStud.email
     };
 }
 

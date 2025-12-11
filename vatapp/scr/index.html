@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../styles/output.css" />
+  </head>
+  <body class="bg-gray-200">
+    <main>
+      <div class="flex flex-column justify-center h-screen items-center py-1">
+        <div
+          class="flex flex-col bg-white justify-center rounded-2xl border-2 border-black p-4"
+        >
+          <h1 class="font-bold text-2xl py-4 px-24">VAT Calculator</h1>
+
+          <fieldset
+            class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
+          >
+            <legend class="text-sm font-medium">What do you want to do?</legend>
+            <div>
+              <input type="radio" id="addvat" value="addvat" checked />
+              <label for="addvat" class="text-sm">Add VAT (Net to Gros)</label>
+            </div>
+            <div>
+              <input type="radio" id="removevat" value="removevat" />
+              <label for="addvat" class="text-sm"
+                >Remove VAT (Gros to Net)</label
+              >
+            </div>
+          </fieldset>
+
+          <fieldset
+            class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
+          >
+            <legend class="text-sm font-medium">VAT Rate</legend>
+            <div>
+              <input type="radio" id="per7" value="per7" />
+              <label for="per7" class="text-sm">7%</label>
+            </div>
+            <div>
+              <input type="radio" id="per19" value="per19" checked />
+              <label for="per19" class="text-sm">19%</label>
+            </div>
+          </fieldset>
+
+          <div
+            class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
+          >
+            <p id="amountlabelnet" class="text-sm font-medium">
+              Net Amount (Price without VAT) in Euro
+              <sup class="text-red-700">*</sup>
+            </p>
+
+            <p id="amountlabelgros" class="text-sm font-medium">
+              Gros Amount (Price including VAT) in Euro
+              <sup class="text-red-700">*</sup>
+            </p>
+            <input
+              type="text"
+              id="amount"
+              placeholder="0.00"
+              size="10"
+              class="bg-white me-44 rounded my-1 p-1 border border-gray-600 text-sm"
+            />
+          </div>
+
+          <input
+            class="w-auto my-2 bg-blue-600 text-white p-1 rounded-xl font-bold cursor-pointer active:scale-95 hover:bg-blue-900"
+            type="button"
+            value="Calculate"
+          />
+
+          <hr class="bg-gray-200 border-0 h-px my-2" />
+          <section name="Output">
+            <h2 class="text-blue-400 underline font-semibold">Result</h2>
+
+            <div
+              class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
+            >
+              <p id="resultvatlable" class="text-sm font-medium">VAT Amount</p>
+
+              <p id="resultvatamount" class="text-sm font-medium">0.00 €</p>
+            </div>
+
+            <div
+              class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
+            >
+              <p id="resultamountlable" class="text-sm font-medium">
+                Gross Amount (Final Price)
+              </p>
+
+              <p id="resultamounteuro" class="text-sm font-medium">0.00 €</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
