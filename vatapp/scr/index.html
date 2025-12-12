@@ -20,11 +20,22 @@
           >
             <legend class="text-sm font-medium">What do you want to do?</legend>
             <div>
-              <input type="radio" id="addvat" value="addvat" checked />
+              <input
+                type="radio"
+                id="addvat"
+                value="addvat"
+                name="vatset"
+                checked
+              />
               <label for="addvat" class="text-sm">Add VAT (Net to Gros)</label>
             </div>
             <div>
-              <input type="radio" id="removevat" value="removevat" />
+              <input
+                type="radio"
+                id="removevat"
+                value="removevat"
+                name="vatset"
+              />
               <label for="addvat" class="text-sm"
                 >Remove VAT (Gros to Net)</label
               >
@@ -36,11 +47,17 @@
           >
             <legend class="text-sm font-medium">VAT Rate</legend>
             <div>
-              <input type="radio" id="per7" value="per7" />
+              <input type="radio" id="per7" value="per7" name="rateset" />
               <label for="per7" class="text-sm">7%</label>
             </div>
             <div>
-              <input type="radio" id="per19" value="per19" checked />
+              <input
+                type="radio"
+                id="per19"
+                value="per19"
+                name="rateset"
+                checked
+              />
               <label for="per19" class="text-sm">19%</label>
             </div>
           </fieldset>
@@ -49,18 +66,18 @@
             class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
           >
             <p id="amountlabelnet" class="text-sm font-medium">
-              Net Amount (Price without VAT) in Euro
+              Net (price without VAT) in Euro
               <sup class="text-red-700">*</sup>
             </p>
 
-            <p id="amountlabelgros" class="text-sm font-medium">
-              Gros Amount (Price including VAT) in Euro
+            <p id="amountlabelgross" class="text-sm font-medium hidden">
+              Gross (price including VAT) in Euro
               <sup class="text-red-700">*</sup>
             </p>
             <input
               type="text"
               id="amount"
-              placeholder="0.00"
+              value="0.00"
               size="10"
               class="bg-white me-44 rounded my-1 p-1 border border-gray-600 text-sm"
             />
@@ -70,6 +87,7 @@
             class="w-auto my-2 bg-blue-600 text-white p-1 rounded-xl font-bold cursor-pointer active:scale-95 hover:bg-blue-900"
             type="button"
             value="Calculate"
+            onclick="setVAT()"
           />
 
           <hr class="bg-gray-200 border-0 h-px my-2" />
@@ -79,7 +97,9 @@
             <div
               class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
             >
-              <p id="resultvatlable" class="text-sm font-medium">VAT Amount</p>
+              <p id="resultvatlabel" class="text-sm font-medium">
+                VAT Amount (19%)
+              </p>
 
               <p id="resultvatamount" class="text-sm font-medium">0.00 €</p>
             </div>
@@ -87,8 +107,9 @@
             <div
               class="flex flex-col justify-center items-left bg-gray-100 my-1 p-2 rounded-md"
             >
-              <p id="resultamountlable" class="text-sm font-medium">
-                Gross Amount (Final Price)
+              <p id="resultlabelgross" class="text-sm font-medium">Gross</p>
+              <p id="resultlabelnet" class="text-sm font-medium hidden">
+                Net (excl. VAT)
               </p>
 
               <p id="resultamounteuro" class="text-sm font-medium">0.00 €</p>
@@ -97,5 +118,6 @@
         </div>
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
