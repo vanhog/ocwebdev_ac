@@ -44,27 +44,33 @@ per19.addEventListener('change', function (event) {
   setVAT();
 });
 
-function calcVat() {
-  let result = Number(vatRate) * 237;
-}
-
 function setVAT() {
   let givenAmount = document.getElementById('amount').value;
-  console.log(givenAmount);
+  // console.log(givenAmount);
   if (isNaN(givenAmount)) {
     document.getElementById('amount').value = '0.00';
-    window.alert('Please enter a valid amount.');
+    document.getElementById('amount_error').classList.remove('hidden');
+    //window.alert('Please enter a valid amount.');
   } else {
     let vatfactor = (100 + Number(vatRate)) / 100;
+
     if (mode === 'add') {
       resAmount = (Number(givenAmount) * vatfactor).toFixed(2);
       resVAT = (resAmount - givenAmount).toFixed(2);
-      document.getElementById('resultvatamount').innerText = `${resVAT} € `;
     } else {
       resAmount = (Number(givenAmount) / vatfactor).toFixed(2);
       resVAT = (givenAmount - resAmount).toFixed(2);
-      document.getElementById('resultvatamount').innerText = `${resVAT} € `;
     }
+
+    document.getElementById('resultvatamount').innerHTML = `${resVAT} &#8364; `;
+    document.getElementById(
+      'resultfinalamount'
+    ).innerHTML = `${resAmount} &#8364;`;
+    document.getElementById('amount').value = Number(givenAmount).toFixed(2);
   }
-  console.log(resAmount, resVAT);
+  //console.log(resAmount, resVAT);
+}
+
+function clear_errorMsg() {
+  document.getElementById('amount_error').classList.add('hidden');
 }
