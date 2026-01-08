@@ -19,9 +19,11 @@ console.log(totalSubstring);
 // This does not work:
 // document.write(substrings[0]);
 // It failes with the following error message
-/* exercise_strngMthds_04.ts:19 Failed to execute 'write' on 'Document': 
+/* 
+exercise_strngMthds_04.ts:19 Failed to execute 'write' on 'Document': 
 It isn't possible to write into a document from an asynchronously-loaded 
-external script unless it is explicitly opened*/
+external script unless it is explicitly opened
+*/
 
 let resultString : string = '';
 
