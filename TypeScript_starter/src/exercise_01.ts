@@ -18,6 +18,7 @@ function displayStudent() {
     console.log(`${studentName} is ${studentAge} years old`);
     console.log(`Enrolled: ${isEnrolled}`);
     console.log(`Grades:`, grades);
+    // Just to see, if it works like expeted or not
     console.log(`Courses:, ${courses}`);
     console.log(`${student.email}`)
 }

@@ -5,7 +5,7 @@ interface IStudent {
 }
 // Add types to these functions
 
-let sampkkkkk : IStudent;
+let samp : IStudent = {name:"Charlie", age:25, email:"charlie@example.com"};
 
 function calculateTotal(price : number, quantity : number, tax : number) : number {
     return price * quantity * (1 + tax);
@@ -31,7 +31,7 @@ function createUser(inStud : IStudent) : {
 }
 
 // Test your functions
-console.log(calculateTotal(10, 3, 0.1));
-console.log(greetUser("Alice"));
+console.log(calculateTotal(10, 3, 0.19));
+console.log(greetUser("Alice", "Hello"));
 console.log(greetUser("Bob", "Good morning"));
-console.log(createUser("Charlie", 25, "charlie@example.com"));
+console.log(createUser(samp));
