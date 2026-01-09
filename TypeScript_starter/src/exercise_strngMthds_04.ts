@@ -33,4 +33,5 @@ substrings.forEach(element => {
 
 resultString += `<p>${totalSubstring}</p>`;
 
+// Write to DOM
 document.getElementById('app').innerHTML = resultString;
