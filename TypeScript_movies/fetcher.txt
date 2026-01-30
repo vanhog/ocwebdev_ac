@@ -1,0 +1,9 @@
+async function readTextFile(): Promise<string> {
+  const response = await fetch('../data.json');
+  return await response.text();
+}
+
+readTextFile().then((text) => {
+  const movies3: string[] = Array.from(text);
+  console.log(movies3);
+});
